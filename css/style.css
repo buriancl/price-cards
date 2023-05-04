@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #19223e;
+  color: #fff;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.card-container {
+  display: flex;
+  min-width: 80vw;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.pricing-card {
+  width: 385px;
+  height: 560px;
+  font-size: 20px;
+  border: 15px solid rgba(112, 112, 112, 0.1);
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.pricing-card.hovered {
+  border-color: #7a3af4;
+}
+.pricing-card .card-top {
+  flex: 1.5;
+  border-bottom: 1px solid #707070;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px 0;
+}
+.pricing-card .card-top .plan-amount {
+  font-size: 60px;
+}
+.pricing-card .card-top .purchase-btn {
+  background: transparent;
+  color: inherit;
+  border: 1px solid #7a3af4;
+  border-radius: 7px;
+  font-size: inherit;
+  width: 200px;
+  height: 60px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+.pricing-card .card-top .purchase-btn.hovered {
+  background-color: #7a3af4;
+}
+.pricing-card .card-bottom {
+  flex: 1;
+}
+.pricing-card .card-bottom ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 672px) {
+  body {
+    height: auto;
+  }
+  .card-container {
+    flex-direction: column;
+  }
+}
